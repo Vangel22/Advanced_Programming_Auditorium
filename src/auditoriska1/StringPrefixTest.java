@@ -1,0 +1,19 @@
+package auditoriska1;
+
+public class StringPrefixTest {
+    public boolean isPrefix(String str1,String str2){
+        //return str2.startsWith(str1);
+        if(str1.length() > str2.length()) {
+            return false;
+        }else if(str1.length() == str2.length() && str1.equals(str2)){
+            return true;
+        }else{
+            for(int i = 0; i < str1.length(); i++){
+                if(str1.charAt(i)!=str2.charAt(i)){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+}
